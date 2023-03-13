@@ -84,54 +84,59 @@ function App() {
       </header>
       <main className='main'>
         <form onSubmit={handleForm}>
-          <label htmlFor='phrase'>Filtrar por frase:</label>
-          <input
-            type='name'
-            name='phrase'
-            id='phrase'
-            value={searchPhrase}
-            onChange={handlePhrase}
-          />
-          <label htmlFor='character'>Filtrar por personaje:</label>
-          <select
-            id='character'
-            name='character'
-            value={searchcharacter}
-            onChange={handleCharacter}
-          >
-            <option value='all'>Todos</option>
-            <option value='ross'>Ross</option>
-            <option value='monica'>Mónica</option>
-            <option value='joey'>Joey</option>
-            <option value='phoebe'>Phoebe</option>
-            <option value='chandler'>Chandler</option>
-            <option value='rachel'>Rachel</option>
-          </select>
+          <fieldset className='fieldset'>
+            <label htmlFor='phrase'>Filtrar por frase:</label>
+            <textarea
+              type='name'
+              name='phrase'
+              id='phrase'
+              value={searchPhrase}
+              onChange={handlePhrase}
+            ></textarea>
+            <label htmlFor='character'>Filtrar por personaje:</label>
+            <select
+              id='character'
+              name='character'
+              value={searchcharacter}
+              onChange={handleCharacter}
+            >
+              <option value='all'>Todos</option>
+              <option value='ross'>Ross</option>
+              <option value='monica'>Mónica</option>
+              <option value='joey'>Joey</option>
+              <option value='phoebe'>Phoebe</option>
+              <option value='chandler'>Chandler</option>
+              <option value='rachel'>Rachel</option>
+            </select>
+          </fieldset>
 
           <ul>{renderList()}</ul>
           <h2>Añadir una nueva frase</h2>
-          <label htmlFor='newPhrase'>Nueva frase:</label>
-          <input
-            type='name'
-            name='newPhrase'
-            id='newPhrase'
-            value={newPhrase}
-            onChange={handleNewPhrase}
-          />
-          <label htmlFor='newCharacter'>Personaje:</label>
-          <input
-            type='name'
-            name='newCharacter'
-            id='newCharacter'
-            value={newCharacter}
-            onChange={handleNewCharacter}
-          />
-          <input
-            type='submit'
-            name='button'
-            value='Añadir una frase'
-            onClick={handleButton}
-          />
+          <fieldset className='fieldset'>
+            <label htmlFor='newPhrase'>Nueva frase:</label>
+            <textarea
+              type='name'
+              name='newPhrase'
+              id='newPhrase'
+              value={newPhrase}
+              onChange={handleNewPhrase}
+            ></textarea>
+            <label htmlFor='newCharacter'>Personaje:</label>
+            <input
+              type='name'
+              name='newCharacter'
+              id='newCharacter'
+              value={newCharacter}
+              onChange={handleNewCharacter}
+            />
+            <input
+              className='fieldset__button'
+              type='submit'
+              name='button'
+              value='Añadir una frase'
+              onClick={handleButton}
+            />
+          </fieldset>
         </form>
       </main>
       <footer className='footer'></footer>

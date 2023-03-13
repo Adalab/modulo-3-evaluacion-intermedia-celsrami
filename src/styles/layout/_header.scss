@@ -1,0 +1,15 @@
+.header {
+  height: 5rem;
+  background-color: rgb(245, 204, 171);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+  width: 100vw;
+  margin-bottom: 20px;
+  &__title {
+    font-size: 1.8rem;
+    color: black;
+  }
+}

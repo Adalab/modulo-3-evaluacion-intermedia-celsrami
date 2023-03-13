@@ -1,0 +1,11 @@
+.fieldset {
+  color: red;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(245, 204, 171);
+
+  &__button {
+    width: 50%;
+  }
+}
