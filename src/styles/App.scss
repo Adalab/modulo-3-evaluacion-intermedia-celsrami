@@ -1,0 +1,10 @@
+:root {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@import "core/variables";
+@import "core/reset";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
